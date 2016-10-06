@@ -1,0 +1,157 @@
+body {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000000;
+    font-family: Cuprum, Arial, sans-serif;
+}
+
+h2 {
+    font-size: 20px;
+    color: #ab1224;
+    text-transform: uppercase;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #630a36;
+}
+
+.container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav {
+    width: 300px;
+    border: 1px solid #630a36;
+}
+
+h2.nav__title {
+    margin: 10px 40px 40px 40px;
+    text-align: center;
+}
+
+.nav__examples {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0px 30px 40px 30px;
+}
+
+a.nav__examples-item {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.nav__examples-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.nav__examples-item img:hover, .nav__examples-item img:active {
+    box-shadow: 0 0 2px 2px #ab1224;
+}
+
+.nav__btn {
+    display: block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ab1224;
+    color: #fff;
+    margin-bottom: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.nav__btn:hover {
+    background-color: #fff;
+    color: #ab1224;
+    font-weight: bold;
+    border: 1px solid #ab1224;
+    border-radius: 5px;
+}
+
+.nav__btn:active {
+    box-shadow: 0 0 2px 2px #ab1224;
+}
+
+.room {
+    width: 660px;
+    height: 700px;
+    background: url("../img/wood-5.jpg");
+}
+
+.bed {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.bed__pillows {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 30px 30px 0 0;
+    padding: 1px;
+    height: 100px;
+}
+
+.bed__pillows-item img {
+    border-radius: 25px/15px;
+    margin-top: 20px;
+}
+
+.bed__top-blanket {
+    height: 70px;
+    background-color: #fff;
+    border: 3px solid #630a36;
+    border-radius: 20px;
+    position: relative;
+    top: 20px;
+}
+
+.bed__blanket {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+}
+
+.bed__blanket.grey .bed__blanket-patch:nth-child(n+1){
+
+    background: #888 !important;
+
+
+}.bed__blanket.grey .bed__blanket-patch:nth-child(2n){
+
+    background: #444 !important;
+
+
+}
+
+.bed__blanket-patch {
+    width: 80px;
+    height: 80px;
+    background-size: cover !important;
+}
+
+.bed__blanket-patch:nth-child(n+1) {
+    background-image: url("../img/violet-star.jpg");
+    background-size: cover;
+}
+
+.bed__blanket-patch:nth-child(2n) {
+    background-image: url("../img/leaves.jpg");
+    background-size: cover;
+}
+
