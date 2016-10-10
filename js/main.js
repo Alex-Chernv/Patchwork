@@ -1,40 +1,30 @@
 $(document).ready(function () {
 
-	var color1 = "";
-	var color2 = "";
-	$( ".nav__examples-item" ).click(function() {
-		if (color1 == "") {
-			color1 = $(this).find("img").attr("src");
-		}
-		else { 
-			color2 = $(this).find("img").attr("src");
+	var colors = [];
 
-		}
-		console.log (color1+" "+color2);
+	$( ".nav__examples-item" ).click(function() {
+		colors.push($(this).find("img").attr("src"));
+		$(this).addClass('active');
 	});
 
 	$( ".nav__btn-off" ).click(function() {
 		$(".bed__blanket").addClass ("grey");
-		color1 = "";
-		color2 = "";
-
-
+		colors = [];
+		$( ".nav__examples-item" ).removeClass ("active");
 	});
-
 
 	$( ".nav__btn-on" ).click(function() {
 		$(".bed__blanket").removeClass ("grey");
+
+		var i=0;
+
 		$( ".bed__blanket-patch" ).each(function( index ) {
-  			if (index%2==0) { 
-  				$(this).css("background","url("+color1+")");
-			}
-			else {
-				$(this).css("background","url("+color2+")");
-
-			}
-  			
+  			$(this).css("background","url("+colors[i]+")");
+  			if ((i+1) >= colors.length) i = 0;
+  			else i++;
 		});
-
+		
+		// $( ".nav__examples-item" ).removeClass ("active");
 	});
 
 	

@@ -45,6 +45,10 @@ a.nav__examples-item {
     width: 100px;
     height: 100px;
     margin-bottom: 20px;
+    cursor: pointer;
+}
+a.nav__examples-item.active {
+    box-shadow: 0 0 2px 2px #ab1224;
 }
 
 .nav__examples-item img {
@@ -68,6 +72,7 @@ a.nav__examples-item {
     padding: 5px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .nav__btn:hover {
